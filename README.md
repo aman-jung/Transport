@@ -20,14 +20,11 @@ npm i live-server -g
 * go to your react folder in command prompt.In my case my folder name is react.So i will simply write command as
 cd react.
 * once you are in your folder write command as 
-<br/>
 live-server 
-<br/>
 It will automatically run index.html file
 
 ### Benefits of using live-server
 * Every time you save your program you dont need to run the server again and again.
-<br/>
 It will automatically run the program with the changes.
 
 
