@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/transport.css" />
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+    function Heading(props) {
+        return(
+            <div>
+            <h2>{props.title}</h2>
+            <h4>{props.subtitle}</h4>
+            </div>
+        )
+    }
+    function SubHeading(props){
+        return(
+            <div>
+            <span>{props.choose}</span>
+            <input type="checkbox"/>
+            </div>
+        )
+    }
+    function Select(props){
+        return(
+            // <div>
+            <option>{props.value}</option>
+            // </div>
+        )
+    }
+    function SelectItem(props){
+        return(
+            <div>
+            <span>{props.type}</span>
+            <select>
+            <Select value={props.items[0]}/>
+            <Select value={props.items[1]}/>
+            <Select value={props.items[2]}/>
+            </select>
+            </div>
+        )
+    }
+    function Vehicle(props){
+        return(
+            <div>
+            <h4>{props.tableHead}</h4>
+            <table id="customers">
+            <thead>
+            <tr>
+            <th>
+            Year
+            </th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Buy</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>{props.items[0]}</td>
+            <td>{props.items[1]}</td>
+            <td>{props.items[2]}</td>
+            <td><button>Buy Now</button></td>
+            </tr>
+            </tbody>
+            </table>
+            </div>
+        )
+    }
+    function Transport(props){
+        return(
+            <div class="flex-container">
+            <Heading title="Welcome To react Transportation" subtitle="The best place to buy Vehicle online"/>
+            <SubHeading choose="New Only"/>
+            <SelectItem type="Select type" items={["All","trucks","Vehicle"]}/>
+            <Vehicle tableHead="Cars" items={["2013","A","$32000"]}/>
+            <Vehicle tableHead="Trucks" items={["2015","B","$52000"]}/>
+            <Vehicle tableHead="Vehicle" items={["2014","C","$52000"]}/>
+            </div>
+        )
+    }
+    ReactDOM.render(
+        <Transport/>,
+        document.getElementById("root")
+    )
+    </script>
+</body>
+</html>
