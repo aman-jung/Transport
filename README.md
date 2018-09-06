@@ -16,10 +16,8 @@ There are two ways to run any code.
 ## Running React program through server
 * install live-server by writing command as 
 npm i live-server -g
-<br/>
 (g stands for globally i.e. it is going to be installed globally)
 * go to your react folder in command prompt.In my case my folder name is react.So i will simply write command as
-<br/> 
 cd react.
 * once you are in your folder write command as 
 <br/>
