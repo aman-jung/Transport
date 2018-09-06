@@ -14,8 +14,7 @@ There are two ways to run any code.
 * By going to your folder and clicking the html file.
 * Running through Server!!!
 ## Running React program through server
-* install live-server by writing command as
-<br/> 
+* install live-server by writing command as 
 npm i live-server -g
 <br/>
 (g stands for globally i.e. it is going to be installed globally)
